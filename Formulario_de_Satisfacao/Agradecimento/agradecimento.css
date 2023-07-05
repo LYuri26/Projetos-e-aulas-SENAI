@@ -1,0 +1,35 @@
+body {
+    background-color: #045cac; /* Cor de fundo */
+    color: #ffffff; /* Cor das letras */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 5rem; /* Tamanho da fonte grande */
+    text-align: center;
+    animation: shimmer 2s linear infinite; /* Animação de brilho */
+  }
+  
+  p {
+    font-size: 2rem; /* Tamanho da fonte grande */
+    text-align: center;
+  }
+    
+  @keyframes shimmer {
+    0% {
+      opacity: 0.5; /* Opacidade inicial */
+    }
+    50% {
+      opacity: 1; /* Opacidade máxima */
+    }
+    100% {
+      opacity: 0.5; /* Opacidade final */
+    }
+  }
+  

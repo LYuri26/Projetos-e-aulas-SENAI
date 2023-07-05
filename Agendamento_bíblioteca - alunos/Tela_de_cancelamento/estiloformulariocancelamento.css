@@ -1,0 +1,78 @@
+/* Define a cor azul e a fonte da FIEMG */
+:root {
+  --fiemg-blue: #0077b6;
+  --fiemg-font: "FIEMG";
+  --fiemg-bold-font: "FIEMG Bold";
+  }
+  
+  /* Define o estilo da página */
+  body {
+  background-color: #ffffff;
+  color: var(--fiemg-blue);
+  font-family: var(--fiemg-font);
+  }
+  
+  .container {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  }
+  
+  h1 {
+  font-family: var(--fiemg-bold-font), Arial, sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--fiemg-blue);
+  text-align: center;
+  }
+  
+  /* Define o estilo dos campos de formulário */
+  label, input[type="number"], textarea {
+  display: block;
+  margin: 0 auto;
+  color: var(--fiemg-blue);
+  font-family: var(--fiemg-font);
+  }
+  
+  label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+  }
+  
+  input[type="number"], textarea {
+  border: 1px solid var(--fiemg-blue);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  text-align: center;
+  }
+  
+  /* Estiliza o botão de envio */
+  button[type="submit"] {
+  background-color: var(--fiemg-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--fiemg-font);
+  display: block;
+  margin: 0 auto;
+  }
+  
+  /* Centraliza o conteúdo */
+  #app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  }
+  
+  /* Centraliza o texto */
+  h1, label, input[type="number"], textarea, button[type="submit"] {
+  text-align: center;
+  }

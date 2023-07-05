@@ -1,0 +1,92 @@
+/* Define um estilo para a barra de pesquisa */
+input[type="text"]#pesquisa, #ano {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ffffff;
+  width: 300px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  color: #fff;
+}
+
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color:  #007bff;
+  cursor: pointer;
+}
+
+/* Aumenta o tamanho do título */
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Define um estilo para a tabela */
+table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #007bff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 90%;
+  font-family: 'FIEMG-Sans', sans-serif;
+}
+
+/* Define um estilo para as células do cabeçalho e das linhas da tabela */
+th,
+td {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Define um estilo para as células do cabeçalho da tabela */
+th {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Define um estilo para as linhas alternadas com fundo azul e branco e letras brancas e azuis */
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+  color: #007bff;
+}
+
+tr:nth-child(odd) {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Define um estilo para as linhas da tabela quando o cursor está em cima delas */
+tr:hover {
+  background-color: #f2f2f2;
+  color: #007bff;
+}
+
+/* Centraliza a tabela horizontalmente */
+table {
+  margin: 20px auto;
+}
+
+/* Define o estilo da página */
+body {
+  background-color: #007bff;
+  color: #f2f2f2;
+  text-align: center;
+}

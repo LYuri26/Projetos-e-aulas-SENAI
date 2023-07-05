@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Importante deixarmos a codificação dos caracteres e o título no início de <head> para otimização e procura da página -->
+    <meta charset="UTF-8">
+    <title>Formulário de Cadastro</title>
+
+    <!-- meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="robots" content="index, nofollow">
+    <meta name="googlebot" content="index, nofollow">
+    <meta name="googlebot" content="notranslate">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="description" content="Cadastro biblioteca SENAI">
+    <meta name="keywords" content="SENAI, Biblioteca, cadastro">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="author" content="SENAI">
+
+    <!-- link tags -->
+    <link rel="stylesheet" href="./config/assets/estilos/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fira+Sans:ital,wght@1,200&family=Montserrat:wght@200&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
+    <!-- script tags que são necessárias estarem em <head> -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        // API do Gmail
+        function handleClientLoad() {
+            gapi.client.setApiKey(API_KEY);
+            window.setTimeout(checkAuth, 1);
+        }
+    </script>
+    <script src="./config/assets/js/gmail api.js" async></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- O ícone da página pode ser carregado no final, por questão de organização do código e porque é interessante processarmos as fontes e estilos primeiro do que o ícone -->
+    <link rel="icon" href="./config/assets/img/senai.ico" type="image/x-icon">
+</head>
+
+
+<body>
+    <div id="app">
+        <div class="voltar">
+            <a href="./logout.php" class="sair">Voltar</a>
+        </div>
+        <form id="forms" action="./conexaocadastro.php" onsubmit="sendEmail();" method="post">
+            <div class="containerimg">
+                <img src="./config/assets/img/senailogo1.png" alt="logo SENAI" id="logosenai">
+            </div>
+            <h2>CADASTRO</h2>
+            <label for="nome">Nome</label>
+            <input type="text" maxlength="60" name="nome" id="nome" placeholder="Digite seu nome" required
+                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digite seu nome'"
+                autocomplete="off"><br><br>
+
+
+            <label for="Código de acesso">Código de acesso</label>
+            <input type="text" name="codigo" ID="codigo" placeholder="Digite o código" required
+                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digite o código'"
+                autocomplete="off"><br><br>
+
+
+            <label for="email" novalidate>Email</label>
+            <input type="email" name="email" id="email" placeholder="exemplo@fiemg.com.br" required
+                pattern="[^@\s]+@fiemg\.com\.br" title="domínio @fiemg.com.br" onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'exemplo@fiemg.com.br'" autocomplete="off"><br><br>
+
+            <label for="confirmar email" novalidate>Confirmar email</label>
+            <input type="email" name="confirmar email" id="confirmaremail" placeholder="Confirmar email" required
+                pattern="[^@\s]+@fiemg\.com\.br" title="domínio @fiemg.com.br" onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Confirmar email'" autocomplete="off"><br>
+
+            <p id="emailErro1" style="color: red;">Email não coincide!</p><br>
+
+            <p id="emailErro"></p>
+
+            <div class="password-container">
+
+                <label for="senha">Senha</label>
+                <input type="password" minlength="8" name="senha" id="senha" placeholder="Digite a senha" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digite a senha'" autocomplete="off">
+
+                <span class="password-toggle-btn" onclick="togglePasswordVisibility('senha', 'password-toggle-icon')">
+                    <i id="password-toggle-icon" class="fas fa-eye"></i>
+                </span>
+            </div>
+
+            <br>
+            <div class="password-container">
+
+                <label for="confirmar senha">Confirmar senha</label>
+                <input type="password" minlength="8" maxlength="62" name="confirmarsenha" id="confirmarsenha" placeholder="Confirme a senha" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirme a senha'" autocomplete="off">
+
+                <span class="password-toggle-btn" onclick="togglePasswordVisibility('confirmarsenha', 'password-toggle-icon1')">
+                    <i id="password-toggle-icon1" class="fas fa-eye"></i>
+                </span>
+            </div>
+
+            <!--Caso as senhas não coincidam, mostrar mensagem-->
+
+            <p id="senhaErro" style="color: red;">Senhas não coincidem!</p><br><br>
+
+            <div class="button-container">
+                <button type="submit" value="Cadastrar">Cadastrar</button>
+            </div>
+            <div class="button-container">
+                <button type="button" id="botao_limpar" onclick="limparFormulario()"
+                    class="limpar-button">Limpar</button>
+            </div>
+    </div>
+    </form>
+    <!--
+        <div id="g_id_onload"
+     data-client_id="CLIENT_ID"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-login_uri="http://localhost:3000/cadastro.html"
+     data-nonce=""
+     data-auto_prompt="false">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="pill"
+     data-theme="outline"
+     data-text="signin"
+     data-size="large"
+     data-locale="pt-BR"
+     data-logo_alignment="left">
+</div>
+-->
+    </div>
+
+    <script>
+        const senha = document.getElementById('senha');
+        const cSenha = document.getElementById('confirmarsenha');
+        const senhaErro = document.getElementById('senhaErro');
+
+        cSenha.addEventListener('blur', () => {
+            if (senha.value !== cSenha.value) {
+                senhaErro.style.display = 'block';
+                senha.value = '';
+                cSenha.value = '';
+            } else {
+                senhaErro.style.display = 'none';
+            }
+        });
+
+        const email = document.getElementById('email');
+        const cEmail = document.getElementById('confirmaremail');
+        const emailErro = document.getElementById('emailErro1');
+
+        cSenha.addEventListener('blur', () => {
+            if (email.value !== cEmail.value) {
+                emailErro.style.display = 'block';
+                email.value = '';
+                cEmail.value = '';
+            } else {
+                emailErro.style.display = 'none';
+            }
+        });
+
+
+        function limparFormulario() {
+            document.getElementById("forms").reset();
+
+            // Limpar manualmente os campos de texto
+            var dados = document.querySelectorAll('#forms input[type="text"]');
+            for (var i = 0; i < dados.length; i++) {
+                dados[i].value = '';
+            }
+        }
+    </script>
+    <script src="./config/assets/js/destruirSessao.js"></script>
+    <script src="./config/assets/js/email_fiemg.js"></script>
+    <!--<script>
+    function togglePasswordVisibility() {
+        var senhaInput = document.getElementById("senha");
+        var toggleIcon = document.getElementById("password-toggle-icon");
+        if (senhaInput.type === "password") {
+          senhaInput.type = "text";
+          toggleIcon.classList.remove("fa-eye");
+          toggleIcon.classList.add("fa-eye-slash");
+        } else {
+          senhaInput.type = "password";
+          toggleIcon.classList.remove("fa-eye-slash");
+          toggleIcon.classList.add("fa-eye");
+        }
+      }
+
+      function togglePasswordVisibility1() {
+        var senhaInput = document.getElementById("confirmarsenha");
+        var toggleIcon = document.getElementById("password-toggle-icon1");
+        if (senhaInput.type === "password") {
+          senhaInput.type = "text";
+          toggleIcon.classList.remove("fa-eye");
+          toggleIcon.classList.add("fa-eye-slash");
+        } else {
+          senhaInput.type = "password";
+          toggleIcon.classList.remove("fa-eye-slash");
+          toggleIcon.classList.add("fa-eye");
+        }
+      }
+    </script>-->
+    <script src="./config/assets/js/passw_eye.js"></script>
+    <!--<script src="./config/assets/js/default.js"></script>-->
+    <footer>
+        <div class="rodape">
+            <p>&copy;2023 UAIBook. Todos os direitos reservados.<br>Curso de Desenvolvimento em Sistemas. Trilhas do
+                Futuro
+                II. <br>SENAI. Uberaba/MG.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

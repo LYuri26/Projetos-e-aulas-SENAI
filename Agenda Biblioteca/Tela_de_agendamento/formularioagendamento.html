@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" /> <!-- Ícone da página -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="estiloagendamento.css"> <!-- Link para o arquivo de estilos CSS -->
+  <title>Agendamento de Biblioteca</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Agendamento de Biblioteca</h1>
+    <form action="agendamentobanco.php" method="post" onsubmit="exibirAlerta(event)">
+
+      <label for="nome">Instrutor:</label> <!-- Label para o campo de entrada de nome do instrutor -->
+      <input type="text" id="nome" name="nome" required><br><br> <!-- Campo de entrada de nome do instrutor -->
+
+      <label for="curso">Curso:</label> <!-- Label para o campo de entrada de nome do curso -->
+      <input type="text" id="curso" name="curso" required><br><br> <!-- Campo de entrada de nome do curso -->
+
+      <label for="data">Data da reserva:</label> <!-- Label para o campo de entrada da data de reserva -->
+      <input type="date" id="data" name="data" required><br><br> <!-- Campo de entrada da data de reserva -->
+
+      <label for="hora_inicio">Hora de Início:</label> <!-- Label para o campo de entrada da hora de início -->
+      <input type="time" id="hora_inicio" name="hora_inicio" required><br><br> <!-- Campo de entrada da hora de início -->
+
+      <label for="hora_termino">Hora de Término:</label> <!-- Label para o campo de entrada da hora de término -->
+      <input type="time" id="hora_termino" name="hora_termino" required><br><br> <!-- Campo de entrada da hora de término -->
+
+      <label for="quantidade_alunos">Quantidade de Alunos:</label> <!-- Label para o campo de entrada da quantidade de alunos -->
+      <input type="number" id="quantidade_alunos" name="quantidade_alunos" required><br><br> <!-- Campo de entrada da quantidade de alunos -->
+
+      <p>O instrutor concorda e está ciente de que em caso de cancelamento 
+        ou não comparecimento ele irá na aba cancelamento do site com antecedencia.</p> <!-- Texto explicativo sobre as punições caso o instrutor não compareça à biblioteca -->
+
+      <input type="checkbox" id="concordo" name="concordo"> <!-- Checkbox para o instrutor concordar com as punições em caso de não comparecimento -->
+      <label for="concordo">Eu concordo e estou ciente.</label> <!-- Label para o checkbox de concordância do instrutor -->
+
+      <p><input type="submit" value="Solicitar agendamento"></p> <!-- Botão de envio do formulário -->
+
+    </form>
+
+    <script src="agendamentoalertas.js"></script> <!-- Link para o arquivo de script JavaScript para exibir alertas -->
+
+  </div>
+
+  <footer>
+    <p>Site desenvolvido pela turma de Desenvolvimento de Sistemas Trilhas de Futuro 2022/02 SENAI - MG Uberaba.</p>
+  </footer>
+  
+</body>
+</html>

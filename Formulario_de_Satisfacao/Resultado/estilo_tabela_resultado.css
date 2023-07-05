@@ -1,0 +1,47 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+th, td {
+    border: 2px solid #ddd;
+    padding: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    word-break: break-word;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f8ff;
+}
+
+tr:hover {
+    background-color: white;
+    color: black;
+}
+
+td[data-field="data"], td[data-field="comentario_adicional"] {
+    padding: 8px;
+}
+
+td[data-field="data"] {
+    width: 15%;
+}
+
+td[data-field="comentario_adicional"] {
+    width: 35%;
+}
+
+body {
+    height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}

@@ -1,0 +1,458 @@
+body {
+  background-color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
+  padding: 2%;
+  height: 400px;
+}
+
+
+#app {
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #005ca9;
+  font-size: 2rem;
+  text-align: center;
+}
+
+form {
+  margin-top: 20rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 5%;
+  padding-bottom: 5%;
+  max-width: 30rem;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 5%;
+  padding-bottom: 5%;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+label {
+  margin-bottom: 1%;
+  font-weight: bold;
+  color: #000000;
+}
+
+input[type="text"] {
+  grid-column: 1;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #005ca9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+.sair {
+  font-family: sans-serif;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  background-color: #005ca9;
+  color: #ffffff;
+  font-size: 1.2em;
+  border: none;
+  padding: 0.5rem 1em;
+  border-radius: 1.5rem 1rem 1.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+}
+
+.sair:hover {
+  background-color: #0c36be;
+}
+
+/*
+input[type="text"]:hover {
+  border-color: #666466;
+}
+*/
+input[type="submit" i] {
+  /*background-color: #005ca9;*/
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1em;
+  border-radius: 1.5rem 1rem 1.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.containerimg {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#logosenai {
+  width: 10rem;
+  flex-grow: 0;
+  max-width: 40%;
+  height: auto;
+}
+
+img {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-content: space-around;
+  align-items: center;
+}
+
+input[type="number" i] {
+  grid-column: 1;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #005ca9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+input[type="email" i] {
+  grid-column: 1;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #005ca9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+#senha {
+  grid-column: 1;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #005ca9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type="password"] {
+  grid-column: 1;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #005ca9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.password-container {
+  position: relative;
+}
+
+/*.password-toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 42%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}*/
+.password-toggle-btn {
+  position: absolute;
+  top: 54%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.button-container {
+  display: contents;
+  flex-direction: column;
+  align-items: right;
+  margin-top: 1000px;
+}
+
+button[type="submit"] {
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: #005ca9;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1em;
+  border-radius: 1.5rem 1rem 1.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+}
+
+.limpar-button {
+  background-color: #005ca9;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: none;
+  padding: 0.5rem 1em;
+  border-radius: 1.5rem 1rem 1.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+  margin-top: 3%;
+}
+
+#botao_limpar:hover {
+  background-color: #0c36be;
+}
+
+button:hover {
+  background-color: #0c36be;
+}
+
+/* Codigo original sem modificação de placeholder show*/
+#nome,
+#codigo,
+#email,
+#senha,
+#confirmarsenha {
+  text-align: left;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* trata-se de um seletor que seleciona os elementos que não tem o atributo placeholder-shown, ou seja, que não está com o placeholder aparecendo. 
+#nome:not(:placeholder-shown), #codigo:not(:placeholder-shown), #email:not(:placeholder-shown), #senha:not(:placeholder-shown), #confirmarsenha:not(:placeholder-shown){
+  text-align: center;
+}
+// apenas do codigo de acesso
+#codigo:not(:placeholder-shown){
+  text-align: center;
+}
+*/
+
+#senhaErro {
+  display: none;
+  float: left;
+  justify-content: flex-start;
+  background-color: transparent;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: -0.5rem;
+  justify-content: flex-start;
+  background-color: transparent;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+#email:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: red;
+}
+
+#confirmaremail:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: red;
+}
+
+#emailErro {
+  display: none;
+}
+
+#emailErro1 {
+  justify-content: flex-start;
+  background-color: transparent;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  justify-content: flex-start;
+  background-color: transparent;
+  font-size: 1em;
+  text-decoration: none;
+  display: none;
+  margin-top: -0.2rem;
+  margin-bottom: -0.2rem;
+}
+
+/*
+#emailErro:invalid {
+  color: aquamarine;
+  display: flex;
+}*/
+#senhaErro::after {
+  display: flex;
+}
+
+.link-button1 {
+  background-color: transparent;
+  color: #005ca9;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 0.8rem;
+  transition: background-color 0.1s ease;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  float: right;
+}
+
+.link-button1:hover {
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+.link-button2 {
+  background-color: transparent;
+  color: #005ca9;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 0.8rem;
+  transition: background-color 0.1s ease;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  float: left;
+}
+
+.link-button2:hover {
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+.rodape {
+  padding-top: 8vh;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  /* Centralizar o conteúdo do rodapé */
+}
+
+.rodape p {
+  font-weight: 600;
+  line-height: 1rem;
+  margin: 0;
+  /* Remover margens para evitar espaçamento extra */
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 100%;
+    padding: 4%;
+    position: relative;
+    overflow: scroll;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  footer {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    /* padding-top: auto; */
+    margin-top: 5rem;
+    object-position: bottom;
+  }
+
+  .containerimg {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+  }
+
+  #logosenai {
+    position: absolute;
+    width: 10rem;
+  }
+
+  form {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 5%;
+    padding-bottom: 5%;
+    max-width: 30rem;
+    border-radius: 15px;
+    padding: 5%;
+    padding-bottom: 5%;
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  .voltar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  /*
+  .rodape {
+    line-height: 0.4rem;
+    text-align: center;
+    white-space: pre-line;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+  }
+  */
+  .rodape p {
+    line-height: 1rem;
+    text-align: center;
+    white-space: pre-line;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+  }
+
+  .sair {
+    position: absolute;
+    font-family: sans-serif;
+    margin: 0.4rem;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    background-color: #005ca9;
+    color: #ffffff;
+    font-size: 1.2em;
+    border: none;
+    padding: 0.5rem 1em;
+    border-radius: 1.5rem 1rem 1.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+    box-sizing: border-box;
+  }
+
+  #app {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

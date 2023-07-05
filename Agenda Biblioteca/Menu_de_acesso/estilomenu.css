@@ -1,0 +1,36 @@
+/* Define o estilo da lista de itens do menu */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: blue;
+  }
+  
+  /* Define o estilo dos itens do menu */
+  nav ul li {
+    margin: 5px;
+  }
+  
+  /* Define o estilo dos links dos itens do menu */
+  nav ul li a {
+    display: block;
+    padding: 40px;
+    background-color: white;
+    color: blue;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  /* Define o estilo dos links dos itens do menu quando o mouse passa por cima */
+  nav ul li a:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+  }
+    

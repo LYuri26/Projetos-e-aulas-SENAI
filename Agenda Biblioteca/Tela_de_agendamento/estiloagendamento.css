@@ -1,0 +1,84 @@
+/* Define a fonte e tamanho de fonte para todos os elementos de formulário */
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Estiliza os campos de entrada */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Estiliza o seletor de quantidade de alunos */
+select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+/* Estiliza as etiquetas */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Define o estilo da página */
+body {
+  background-color: #007bff;
+  color: white;
+  font-family: "FIEMG";
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estiliza o formulário de envio */
+form {
+  background-color: #007bff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 60%;
+  font-family: 'FIEMG-Sans', sans-serif;
+}
+
+/* Define a largura do formulário */
+#app {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Define a largura máxima do formulário para dispositivos móveis */
+@media (max-width: 768px) {
+  #app {
+    width: 100%;
+  }
+}
+
+#concordo {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+label[for="concordo"] {
+  display: inline-block;
+  vertical-align: middle;
+}

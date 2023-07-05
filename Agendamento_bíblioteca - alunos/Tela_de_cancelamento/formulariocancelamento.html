@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="estiloformulariocancelamento.css">
+    <title>Cancelamento de Biblioteca</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Cancelamento de Biblioteca</h1>
+      <form action="cancelamentobanco.php" method="post">
+
+        <label for="id_reserva">ID da Reserva:</label>
+        <input type="number" id="id_reserva" name="id_reserva" required><br><br>
+    
+        <label for="motivo">Motivo do cancelamento:</label>
+        <textarea id="motivo" name="motivo" required></textarea><br><br>
+
+        <input type="submit" value="Cancelar">
+      </form>
+    
+    </div>
+  </body>
+</html>

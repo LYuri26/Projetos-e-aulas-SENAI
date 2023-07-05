@@ -1,0 +1,5 @@
+1. chamar na pagina agendamento a tabela agendamento
+
+2. Excluir os dados da tabela agendamento de acordo com o cancelamento informado (trigger).
+
+3. Estilizar com CSS.

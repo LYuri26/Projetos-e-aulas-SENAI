@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Define a codificação de caracteres da página -->
+    <meta charset="UTF-8" />
+    <!-- Define o ícone exibido na guia do navegador -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <!-- Define o comportamento do viewport em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Inclui o arquivo de estilo externo -->
+    <link rel="stylesheet" type="text/css" href="estiloformulariocancelamento.css">
+    <!-- Define o título da página exibido na guia do navegador -->
+    <title>Cancelamento de Biblioteca</title>
+  </head>
+  <body>
+    <!-- Define um contêiner para centralizar o conteúdo da página -->
+    <div id="app">
+      <!-- Define o título principal da página -->
+      <h1>Cancelamento de Biblioteca</h1>
+      <!-- Define um formulário para o usuário cancelar uma reserva -->
+      <form action="cancelamentobanco.php" method="post">
+
+        <!-- Define um rótulo e um campo para inserir o ID da reserva a ser cancelada -->
+        <label for="id_reserva">ID da Reserva:</label>
+        <input type="number" id="id_reserva" name="id_reserva" required><br><br>
+
+        <!-- Define um rótulo e um campo para inserir o motivo do cancelamento -->
+        <label for="motivo">Motivo do cancelamento:</label>
+        <textarea id="motivo" name="motivo" required></textarea><br><br>
+
+        <!-- Define um botão para enviar o formulário -->
+        <input type="submit" value="Solicitar cancelamento">
+      </form>
+    
+    </div>
+
+  <footer>
+    <p>Site desenvolvido pela turma de Desenvolvimento de Sistemas Trilhas de Futuro 2022/02 SENAI - MG Uberaba.</p>
+  </footer>
+  
+  </body>
+</html>

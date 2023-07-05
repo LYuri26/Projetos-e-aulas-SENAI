@@ -1,0 +1,6 @@
+Id cliente
+258998056882-iqgnnsd2j54b6oc07dk2k8t6tfsrbris.apps.googleusercontent.com
+
+
+Chave secreta cliente
+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
